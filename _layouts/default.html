@@ -13,16 +13,14 @@
 
     <!-- Page Wrapper -->
     <div id="page-wrapper">
-      
-      {{ "{%" }} raw %}
 
       {% include header.html %}
 
-      <article{%
+      <article {{ "{%" }} raw %}{%
         if page.background-image %} id="main"{%
         elsif page.options contains 'minihead' %} id="minihead"{%
         else %} id="standard"{%
-        endif %}>
+        endif %}{{ "{%" }} endraw %}>
 
         {% include header-inner.html %}
 
@@ -33,8 +31,6 @@
       {% include footer.html %}
 
       {% include scripts.html %}
-      
-      {{ "{%" }} endraw %}
 
     </div>
 

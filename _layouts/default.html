@@ -16,7 +16,7 @@
 
       {% include header.html %}
 
-      <article{%
+      {{ "{%" }} raw %}<article{%
         if page.background-image %} id="main"{%
         elsif page.options contains 'minihead' %} id="minihead"{%
         else %} id="standard"{%
@@ -26,7 +26,7 @@
 
         {{ content }}
 
-      </article>
+      </article>{{ "{%" }} endraw %}
 
       {% include footer.html %}
 

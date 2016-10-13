@@ -16,11 +16,11 @@
 
       {% include header.html %}
 
-      <article {%
+      <article{% raw %}{%
         if page.background-image %} id="main"{%
         elsif page.options contains 'minihead' %} id="minihead"{%
         else %} id="standard"{%
-        endif %}>
+        endif %}{% endraw %}>
 
         {% include header-inner.html %}
 

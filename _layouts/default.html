@@ -20,13 +20,15 @@
         if page.background-image %} id="main"{%
         elsif page.options contains 'minihead' %} id="minihead"{%
         else %} id="standard"{%
-        endif %}>{% endraw %}
+        endif %}>
 
         {% include header-inner.html %}
 
         {{ content }}
 
       </article>
+      
+      {% endraw %}
 
       {% include footer.html %}
 
